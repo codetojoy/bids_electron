@@ -1,0 +1,18 @@
+<div class="panel panel-default row" ng-controller="configController">
+    <div class="col-xs-3">
+        <div ng-include="'views/config/buttonBar.html'"></div>
+    </div>
+    <div class="col-xs-8">
+        <form name="myForm" novalidate ng-class="showValidation ? 'validate' : ''">
+            # cards: <input required 
+                             name="numCards" 
+                             type="number" 
+                             ng-model="data.numCards"
+                             ng-change="changeNumCards()"
+                             validatenumcards></input>
+            <div class="configerror" ng-show="showValidation"> {{getError(myForm.numCards.$error)}} </div>
+            <br/>
+            # cards per hand: {{ data.numCardsInHand }}
+        </form>
+    </div>
+</div>

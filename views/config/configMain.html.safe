@@ -1,0 +1,24 @@
+<div class="panel panel-default row" ng-controller="configController">
+    <div class="col-xs-3">
+        <div ng-include="'views/config/buttonBar.html'"></div>
+    </div>
+    <div class="col-xs-8">
+        <form name="myForm" novalidate ng-submit="update()"
+                ng-class"showValidation ? 'validate' : ''">
+            numCards: <input required name="numCards" type="number" ng-model="data.numCards"></input>
+            <div class="error" ng-show="showValidation"> {{getError(myForm.numCards.$error)}} </div>
+
+            <button type="submit" class="btn btn-primary btn-block"
+                ng-disabled="myForm.$invalid">Save</button>
+        </form>
+
+<!--
+        <div class="well">
+            <div ng-repeat="player in data.players">
+                <strong>{{ player.name }}</strong>
+            </div>
+            <button class="btn-lg" ng-click="addPlayer()">Add Player</button>
+        </div>
+-->
+    </div>
+</div>
