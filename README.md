@@ -14,4 +14,4 @@
 ### to build app (for Mac OS)
 
 * `npm run build`
-* see `Bids_darwin_64`
+* run `Bids_darwin_64/Bids.app`
